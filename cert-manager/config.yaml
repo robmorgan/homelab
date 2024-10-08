@@ -7,8 +7,10 @@ spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     email: robbym@gmail.com
+    # Name of a secret used to store the private key
     privateKeySecretRef:
       name: letsencrypt-staging
+    # Enable the HTTP-01 challenge provider
     solvers:
       - http01:
           ingress:
@@ -22,8 +24,10 @@ spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: robbym@gmail.com
+    # Name of a secret used to store the private key
     privateKeySecretRef:
       name: letsencrypt-prod
+    # Enable the HTTP-01 challenge provider
     solvers:
       - http01:
           ingress:

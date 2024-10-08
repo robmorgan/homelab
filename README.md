@@ -63,6 +63,7 @@ by running the following:
 ### Install and Configure Cert Manager
 
 ```sh
+./bin/install-cert-manager.sh
 kubectl apply -f cert-manager/certificate.yaml
 kubectl apply -f cert-manager/config.yaml
 kubectl apply -f cert-manager/ingress.yaml
@@ -94,6 +95,13 @@ kubectl logs -n cloudflare $(kubectl get pod -l app=cloudflared -n cloudflare -o
 cloudflared tunnel route dns b93b64c6-418d-404c-b6c6-79e12300d7b8 tunnel.mrncloud.com
 ```
 
+### Install Home Assistant
+
+```sh
+
+```
+
+
 ## Open Questions
 
  * Should I disable traefik?
@@ -102,3 +110,7 @@ cloudflared tunnel route dns b93b64c6-418d-404c-b6c6-79e12300d7b8 tunnel.mrnclou
 ## TODO
 
 - [ ] Remote access via Tailscale / Cloudflare
+
+## References
+
+ * https://cert-manager.io/v1.15-docs/configuration/acme/

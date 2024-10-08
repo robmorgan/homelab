@@ -8,7 +8,7 @@ spec:
   tls:
     - hosts:
         - mrncloud.com
-      secretName: mrncloud-com-cert
+      secretName: mrncloud-cert
   rules:
     - host: "mrncloud.com"
       http:

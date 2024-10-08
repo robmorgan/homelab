@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: mrncloud-com-cert
+  name: mrncloud-cert
   namespace: ingress-nginx
 spec:
-  secretName: mrncloud-com-tls
+  secretName: mrncloud-cert
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
