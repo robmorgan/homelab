@@ -114,3 +114,4 @@ cloudflared tunnel route dns b93b64c6-418d-404c-b6c6-79e12300d7b8 tunnel.mrnclou
 ## References
 
  * https://cert-manager.io/v1.15-docs/configuration/acme/
+ * https://github.com/mysticrenji/home-assistant-on-kubernetes
