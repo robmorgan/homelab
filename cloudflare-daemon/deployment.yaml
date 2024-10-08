@@ -95,6 +95,8 @@ data:
       service: http://home-assistant.home-assistant.svc.cluster.local
     - hostname: nginx.mrncloud.com
       service: http://nginx.default.svc.cluster.local
+    - hostname: portainer.mrncloud.com
+      service: http://portainer.portainer.svc.cluster.local
     #- hostname: vscode.mrncloud.dev
     #  service: http://kube-plex.kube-plex.svc.cluster.local
     #- hostname: plex.mrncloud.dev
