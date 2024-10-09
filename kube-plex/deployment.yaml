@@ -10,14 +10,13 @@ metadata:
   namespace: kube-plex
   name: kube-plex
 spec:
-  selector:
-    app: kube-plex
-  type: ClusterIP
+  type: NodePort
   ports:
     - name: http
       protocol: TCP
       port: 80
       targetPort: 32400
+      nodePort: 32400
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -54,10 +53,10 @@ spec:
             - mountPath: /movies
               name: plex-movies
           env:
-            - name: NVIDIA_DRIVER_CAPABILITIES
-              value: compute,video,utility
-            - name: NVIDIA_VISIBLE_DEVICES
-              value: all
+            # - name: NVIDIA_DRIVER_CAPABILITIES
+            #   value: compute,video,utility
+            # - name: NVIDIA_VISIBLE_DEVICES
+            #   value: all
             - name: PGID
               value: "1001"
             - name: PLEX_CLAIM
@@ -79,11 +78,11 @@ spec:
             claimName: plex-config
         - name: plex-tv
           hostPath:
-            path: /home/edgeblazer/plex/media/
+            path: /home/rjm/plex/media/
             type: Directory
         - name: plex-movies
           hostPath:
-            path: /home/edgeblazer/plex/movies/
+            path: /home/rjm/plex/movies/
             type: Directory
 ---
 apiVersion: v1
