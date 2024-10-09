@@ -98,9 +98,10 @@ cloudflared tunnel route dns b93b64c6-418d-404c-b6c6-79e12300d7b8 tunnel.mrnclou
 ### Install Home Assistant
 
 ```sh
-
+kubectl apply -f home-assistant/configmap_updated.yaml
+kubectl apply -f home-assistant/pvc.yaml
+kubectl apply -f home-assistant/deployment.yaml
 ```
-
 
 ## Open Questions
 
@@ -114,4 +115,7 @@ cloudflared tunnel route dns b93b64c6-418d-404c-b6c6-79e12300d7b8 tunnel.mrnclou
 ## References
 
  * https://cert-manager.io/v1.15-docs/configuration/acme/
+ * https://github.com/jaygould/home-assistant/
  * https://github.com/mysticrenji/home-assistant-on-kubernetes
+ * https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
+ * https://github.com/ChristianLempa/homelab
