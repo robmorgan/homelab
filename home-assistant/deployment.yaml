@@ -50,6 +50,11 @@ spec:
               memory: "512Mi"
           ports:
             - containerPort: 8123
+            # https://www.home-assistant.io/integrations/sonos/#network-requirements
+            # sonos reply
+            - containerPort: 1400
+            # sonos announce tts
+            - containerPort: 1443
           volumeMounts:
             - mountPath: /config
               name: config
