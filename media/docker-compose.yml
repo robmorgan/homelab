@@ -54,7 +54,7 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
       - WEBUI_PORT=8080 # must match "qbittorrent web interface" port number in gluetun's service above
-      - TORRENTING_PORT=${FIREWALL_VPN_INPUT_PORTS} # airvpn forwarded port, pulled from .env
+      - TORRENTING_PORT=${FIREWALL_VPN_INPUT_PORTS} # vpn forwarded port, pulled from .env
     volumes:
       - ./qbittorrent:/config
       - /data:/data
