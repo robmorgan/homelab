@@ -12,7 +12,7 @@ services:
     ports:
       - 32400:32400
     devices:
-     - /dev/dri:/dev/dri # QuickSync
+      - /dev/dri:/dev/dri # QuickSync
     volumes:
       - ./plex:/config
       - /data:/data

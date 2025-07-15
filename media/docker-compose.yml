@@ -1,7 +1,7 @@
 # Compose file for the *arr stack. Configuration files are stored in the
 # directory you launch the compose file on. Change to bind mounts if needed.
 # All containers are ran with user and group ids of the main user and
-# group to aviod permissions issues of downloaded files, please refer
+# group to avoid permissions issues of downloaded files, please refer
 # the read me file for more information.
 #
 # Loosely based on the following:
@@ -15,7 +15,6 @@ networks:
         - subnet: 172.39.0.0/24
 
 services:
-  # airvpn recommended (referral url: https://airvpn.org/?referred_by=673908)
   gluetun:
     image: qmcgaw/gluetun
     container_name: gluetun
@@ -27,7 +26,7 @@ services:
       servarrnetwork:
         ipv4_address: 172.39.0.2
     ports:
-      - ${FIREWALL_VPN_INPUT_PORTS}:${FIREWALL_VPN_INPUT_PORTS} # airvpn forwarded port, pulled from .env
+      - ${FIREWALL_VPN_INPUT_PORTS}:${FIREWALL_VPN_INPUT_PORTS} # vpn forwarded port, pulled from .env
       - 8080:8080 # qbittorrent web interface
       - 6881:6881 # qbittorrent torrent port
       - 6789:6789 # nzbget
