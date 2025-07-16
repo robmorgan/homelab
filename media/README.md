@@ -1,5 +1,11 @@
 # Media Server
 
+## TODO
+
+- [ ] Start Page
+- [ ] Remote Access
+- [ ] Cloudflare Zero Trust
+
 ## Components
 
  * Plex
@@ -21,4 +27,12 @@ through the the gluetun container.
 ```sh
 docker exec -it container_name bash
 wget -qO- https://ipinfo.io
+```
+
+## Updating a Container Image
+
+```sh
+docker compose pull jellyseerr
+docker compose up -d jellyseerr
+docker image prune # dangerous
 ```
